@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor 
+  attr_accessor
   def kind(side1,side2,side3)
     
   end
