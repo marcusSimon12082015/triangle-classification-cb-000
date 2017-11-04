@@ -19,7 +19,9 @@ class Triangle
   def isosceles?
     @side1 == @side2 || @side2 == @side3 || @side1 == @side3
   end
-  
+  def scalene?
+    @side1 != @side2 && @side2 != @side3 && @side1 != @side3
+  end
   def valid?
     (@side1 && @side2 && @side3) > 0 && triangle_inequality?
   end
