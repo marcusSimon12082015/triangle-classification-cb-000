@@ -1,21 +1,29 @@
 class Triangle
   # write code here
-  attr_accessor
-  def kind(side1,side2,side3)
+  attr_accessor :side1,:side2,:side3
+  def initialize(side1,side2,side3)
+    @side1 = side1
+    @side2 = side2
+    @side3 = side3
+  end
+  def kind
     if valid?
-
+      
     else
-
+      
     end
   end
-  def equilateral?(side1,side2,side3)
-    side1 == side2 && side1 == side3
+  def equilateral?
+    @side1 == @side2 && @side1 == @side3
   end
-  def valid?(side1,side2,side3)
-    (side1 && side2 && side3) > 0 && triangle_inequality?
+  def isosceles?
+
   end
-  def triangle_inequality?(side1,side2,side3)
-    (side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2)
+  def valid?
+    (@side1 && @side2 && @side3) > 0 && triangle_inequality?
+  end
+  def triangle_inequality?
+    (@side1 + @side2 > @side3) && (@side2 + @side3 > @side1) && (@side3 + @side1 > @side2)
   end
 end
 
