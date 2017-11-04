@@ -8,17 +8,18 @@ class Triangle
   end
   def kind
     if valid?
-      
+
     else
-      
+
     end
   end
   def equilateral?
     @side1 == @side2 && @side1 == @side3
   end
   def isosceles?
-
+    @side1 == @side2 || @side2 == @side3 || @side1 == @side3
   end
+  
   def valid?
     (@side1 && @side2 && @side3) > 0 && triangle_inequality?
   end
