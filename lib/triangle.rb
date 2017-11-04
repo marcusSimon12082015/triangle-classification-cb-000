@@ -8,9 +8,14 @@ class Triangle
   end
   def kind
     if valid?
-
+      if equilateral?
+        :equilateral
+      elsif isosceles?
+        :isosceles
+      elsif scalene?
+        :scalene
     else
-
+      raise TriangleError
     end
   end
   def equilateral?
